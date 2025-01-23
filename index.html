@@ -1,17 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/favicon-32x32 7.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-32x32 7.png"
+      type="image/x-icon"
+    />
     <title>News || page</title>
-</head>
-<body>
+    <script>
+        tailwind.config={
+            theme:{
+                extend:{
+                    colors:{
+                        grayishBlue:"hsl(233, 8%, 79%)",
+                        softBrange:"hsl(35, 77%, 62%)",
+                        softRed:"hsl(5, 85%, 63%)",
+                        offWhite:"hsl(36, 100%, 99%)",
+                        darkGrayishBlue:"hsl(236, 13%, 42%)",
+                        veryDarkBlue:"hsl(240, 100%, 5%)"
+                    },
+                    fontFamily:{
+                        inter:['"Inter", serif']
+                    }
+
+
+                }
+            }
+        }
+    </script>
+  </head>
+  <body class="font-Inter">
     <!-- nav -->
-     <nav>
-        <div>
-            <img src="assets/logo.svg" alt="nav-logo">
+    <nav class="container mx-auto p-[20px] lg:py-[58px] lg:px-[140px] flex justify-between items-center">
+      <div>
+        <img src="assets/logo.svg" alt="nav-logo" />
+      </div>
+      <!-- nav-items -->
+       <ul class="hidden md:flex gap-12 font-[400] text-darkGrayishBlue">
+        <li class="hover:text-softRed cursor-pointer">Home</li>
+        <li class="hover:text-softRed cursor-pointer">New</li>
+        <li class="hover:text-softRed cursor-pointer">Popular</li>
+        <li class="hover:text-softRed cursor-pointer">Trending</li>
+        <li class="hover:text-softRed cursor-pointer">Categories</li>
+       </ul>
+       <!-- menu-img -->
+        <div class="md:hidden">
+            <img src="assets/icon-menu .svg" alt="menu-icon">
         </div>
-     </nav>
-</body>
+    </nav>
+    <!-- main -->
+     <main class="container mx-auto p-[20px] lg:py-[58px] lg:px-[140px]">
+        <!-- main-section -->
+         <section class="lg:grid grid-cols-3 gap-12">
+            <!-- section-1 -->
+             <section class="col-span-2">
+                <!-- div-1 -->
+                 <div>
+                    <img src="assets/image-web-3-desktop.jpg" alt="image-web-3-desktop" class="hidden md:block">
+                    <img src="assets/image-web-3-mobile.jpg" alt="image-web-3-mobile" class="md:hidden">
+                 </div>
+                 <!-- div-2 -->
+                  <div class="lg:grid grid-cols-2">
+                    <h1 class="font-[800] text-[32px] md:text-[50px]">The Bright Future of Web 3.0?</h1>
+                    <div>
+                    <p>We dive into the next evolution of web that claims to put the power of the platforms back the hands of the people. But is it really fulfulling its promise?</p>
+                    <button>READ MORE</button>
+                    </div>
+                  </div>
+             </section>
+             <!-- section-2 -->
+              <section>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores at reiciendis perspiciatis voluptates veniam, fuga fugit, maiores quibusdam quod doloribus impedit aut non illo voluptate, a maxime. Voluptatum ipsa eius, voluptatem distinctio ab fugiat fuga iste delectus mollitia dolorem dolor minus rerum enim non debitis, quod molestiae voluptate minima corporis. Enim sequi ex minus inventore tempore, iure nesciunt temporibus? Adipisci amet possimus perspiciatis tempora fuga recusandae delectus iste nesciunt inventore culpa deserunt voluptate ducimus eligendi ipsam quibusdam sapiente assumenda aliquam, ab doloremque et dicta. Officia blanditiis illo adipisci officiis repellendus. Vel fugiat, optio non corrupti id molestiae facere error cupiditate!</p>
+              </section> 
+         </section>
+     </main>
+  </body>
 </html>
